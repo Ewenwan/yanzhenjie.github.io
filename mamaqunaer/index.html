@@ -10,7 +10,9 @@
     <script src="app_api.js"></script>
     <script type="text/javascript">
         function initialize() {
-            app.initialize();
+            app.initialize(function () {
+                alert("初始化完成，用户是否登录：" + app.isLogin());
+            });
         }
 
         function isLogin() {
