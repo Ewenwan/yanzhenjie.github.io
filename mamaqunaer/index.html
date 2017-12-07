@@ -10,7 +10,11 @@
     <script src="app_api.js"></script>
     <script type="text/javascript">
         function initialize() {
-            app.initialize();
+            app.initialize({
+                callback: function () {
+                    alert("初始化完成");
+                }
+            });
         }
 
         function isLogin() {
@@ -126,7 +130,7 @@
 </head>
 <body onload="initialize()">
 <div>
-	<a href="http://www.mamaqunaer.com">打开官网web</a>
+    <a href="http://www.mamaqunaer.com">打开官网web</a>
     <br/><br/>
     <button onClick="isLogin()" type="button">用户是否登录</button>
     <br/><br/>
